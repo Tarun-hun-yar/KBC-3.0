@@ -373,25 +373,25 @@
     // Function to update the quitVariable based on the highlighted element
     function updateQuitVariable() {
       if (hasYellowBackground(element1k)) {
-        quitVariable = 1000;
+        quitVariable = 0;
       } else if (hasYellowBackground(element2k)) {
-        quitVariable = 2000;
+        quitVariable = `1,000`;
       } else if (hasYellowBackground(element40k)) {
-        quitVariable = 40000;
+        quitVariable = `2,000`;
       } else if (hasYellowBackground(element80k)) {
-        quitVariable = 80000;
+        quitVariable = `40,000`;
       } else if (hasYellowBackground(element3l)) {
-        quitVariable = 300000;
+        quitVariable = `80,000`;
       } else if (hasYellowBackground(element6l)) {
-        quitVariable = 600000;
+        quitVariable = `3,00,000`;
       } else if (hasYellowBackground(element12l)) {
-        quitVariable = 1200000;
+        quitVariable = `6,00,000`;
       } else if (hasYellowBackground(element25l)) {
-        quitVariable = 2500000;
+        quitVariable = `12,00,000`;
       } else if (hasYellowBackground(element1c)) {
-        quitVariable = 10000000;
+        quitVariable = `25,00,000`;
       } else if (hasYellowBackground(element7c)) {
-        quitVariable = 70000000;
+        quitVariable = `1,00,00,000`;
       } else {
         quitVariable = 0;
       }
