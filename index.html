@@ -115,7 +115,7 @@
     <!-- -----------QUIT BUTTON------------ -->
     <div class="relative flex justify-center sm:justify-center md:justify-center lg:justify-center xl:justify-start xl:ml-[10rem]">
       <button id="quitButton"
-        class="bg-red-500 p-3 text-sm font-bold rounded-md absolute top-[82vh] md:top-[95vh] lg:top-[30rem] xl:top-72">
+        class="bg-red-500 p-3 text-sm font-bold rounded-md absolute top-[82vh] md:top-[95vh] lg:top-[30rem] xl:top-72 hidden">
         Quit
       </button>
     </div>
@@ -1173,6 +1173,7 @@
     // ---------------------------------------------------------------------------------------------------
     // Function to handle option click
     function handleOptionClick(event) {
+      document.getElementById('quitButton').style.display = 'none';
       console.log(`${event.target.id} clicked`);
       // Stop the timer when an option is clicked
       if (window.timerInterval) {
@@ -1359,6 +1360,7 @@
 
     // Attach event listeners
     document.getElementById('showOptionsButton').addEventListener('click', function () {
+      document.getElementById('quitButton').style.display = 'block';
       // Determine the time limit based on the current question set
       let timeLimit;
       switch (currentQuestionSet) {
