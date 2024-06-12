@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -79,9 +78,9 @@
   <div id="firstDiv" class="h-screen flex items-center justify-center ">
     <img src="1st picture.png" alt="">
 
-    <button id="startGameBtn" class="bg-blue-700 text-white rounded-md p-3 absolute top-[90%] ">START
+    <button id="startGameBtn" class="bg-blue-700 text-white rounded-md p-3 absolute top-[80%] ">START
       GAME</button>
-    <button class="hidden bg-green-700 text-white rounded-md p-3 absolute top-[90%] " id="skipIntroBtn">SKIP
+    <button class="hidden bg-green-700 text-white rounded-md p-3 absolute top-[80%] " id="skipIntroBtn">SKIP
       INTRO</button>
   </div>
 
@@ -96,44 +95,48 @@
     <canvas id="Canvas" class="">
     </canvas>
   </div>
-<!-- -------------------------------------QUIT BOX----------------------------------------- -->
-<div id="quitBox"
-class="hidden z-20 w-60 lg:w-96 xl:w-96 bg-purple-700 custom-shape shadow-lg rounded-3xl border-4 border-yellow-500 absolute h-70 lg:h-96 xl:h-96 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-<div class="flex flex-col items-center justify-center">
-  <div class="mt-[25%]">
-    <h1 id="quitMessage" class="text-xl lg:text-4xl text-yellow-300 font-bold"></h1>
-  </div>
-  <button id="nextBtn2"
-    class="size-20 lg:mt-[25%] xl:mt-[25%] bottom-4 bg-blue-700 text-yellow-300 py-1 px-4 text-lg font-bold rounded">
-    Play Again
-  </button>
-</div>
-</div>
-<!-- --- LIFELINE------- -->
-<div class=" absolute top-64 lg:top-[30rem] xl:top-72 " id="lifelines">
-  <div class="hidden" id="lifelinesHide">
-
-    <div class="flex items-center justify-center">
-      <!-- -------------flip the question lifeline----------------- -->
-      <div class="flex items-center justify-center size-14 bg-black rounded-full border-4 border-gray-300 cursor-pointer"
-        id="flipQuestionButton">
-        <div class="inline-block text-white text-3xl font-bold cursor-pointer p-2" id="flipQuestionButtonKaSpanTag">Q</div>
+  <!-- -------------------------------------QUIT BOX----------------------------------------- -->
+  <div id="quitBox"
+    class="hidden z-20 w-60 lg:w-96 xl:w-96 bg-purple-700 custom-shape shadow-lg rounded-3xl border-4 border-yellow-500 absolute h-70 lg:h-96 xl:h-96 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+    <div class="flex flex-col items-center justify-center">
+      <div class="mt-[25%]">
+        <h1 id="quitMessage" class="text-xl lg:text-4xl text-yellow-300 font-bold"></h1>
       </div>
-      <!-- -------------50-50 lifeline----------------- -->
-      <div class="flex items-center justify-center size-14 bg-black rounded-full border-4 border-grey-300 cursor-pointer"
-        id="fiftyFiftyButton">
-        <span class="text-white text-lg font-semibold cursor-pointer">50:50</span>
-      </div>
+      <button id="nextBtn2"
+        class="size-20 lg:mt-[25%] xl:mt-[25%] bottom-4 bg-blue-700 text-yellow-300 py-1 px-4 text-lg font-bold rounded">
+        Play Again
+      </button>
     </div>
   </div>
-</div>
-<!-- ------------------------------ -->
+  <!-- ------------------------------ -->
   <div class="hidden" id="mainDiv">
-    <!-- -----------QUIT BUTTON------------ -->
-   <button id="quitButton"
-      class="absolute left-[40%] md:left-[40vw] lg:left-[79vw] xl:left-[45%] top-[39rem] lg:top-[57rem] xl:top-[93%] bg-red-500 p-3 font-bold rounded-md">
-      Quit
-    </button>
+    <!-- --- LIFELINE------- -->
+    <div class=" absolute top-60 lg:top-[30rem] xl:top-72 " id="lifelines">
+      <div class="hidden" id="lifelinesHide">
+
+        <div class="flex items-center justify-center">
+          <!-- -------------flip the question lifeline----------------- -->
+          <div
+            class="flex items-center justify-center size-14 bg-black rounded-full border-4 border-gray-300 cursor-pointer"
+            id="flipQuestionButton">
+            <div class="inline-block text-white text-3xl font-bold cursor-pointer p-2" id="flipQuestionButtonKaSpanTag">
+              Q</div>
+          </div>
+          <!-- -----------QUIT BUTTON------------ -->
+          <button id="quitButton"
+            class=" bg-red-500 p-3 font-bold rounded-md p-0">
+            Quit
+          </button>
+          <!-- -------------50-50 lifeline----------------- -->
+          <div
+            class="flex items-center justify-center size-14 bg-black rounded-full border-4 border-grey-300 cursor-pointer hidden"
+            id="fiftyFiftyButton">
+            <span class="text-white text-lg font-semibold cursor-pointer">50:50</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- --------------------KBC Logo---------------------- -->
     <div class="flex ml-6 md:ml-[35vw] lg:ml-[70vw] lg:mt-10 xl:mt-0 xl:ml-0 justify-start xl:justify-center">
       <img src="KBC Logo.png" alt="KBC Logo"
@@ -141,45 +144,45 @@ class="hidden z-20 w-60 lg:w-96 xl:w-96 bg-purple-700 custom-shape shadow-lg rou
     </div>
     <!-- ---------------------Cureent Question Bar------------------------ -->
     <div
-      class="absolute flex justify-center -mt-40 xl:-mt-80 w-52 xl:w-auto left-[50%] md:left-[70vw] lg:left-[50vw] xl:left-0 lg:ml-[85%] xl:ml-[85%] border-yellow-500 border-2 rounded-md px-2">
+      class="absolute flex justify-center -mt-40 xl:-mt-80 w-52 xl:w-auto left-[42%] md:left-[70vw] lg:left-[50vw] xl:left-0 lg:ml-[85%] xl:ml-[85%] border-yellow-500 border-2 rounded-md px-2">
       <div class="flex flex-col w-72 xl:w-auto">
-        <div class="flex justify-between text-white text-lg font-bold" id="7c">
+        <div class="flex justify-between text-white lg:text-lg font-bold" id="7c">
           <span>10 ◊</span>
           <span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 7 Crore</span>
         </div>
-        <div class="flex justify-between text-white text-lg font-bold" id="1c">
+        <div class="flex justify-between text-white lg:text-lg font-bold" id="1c">
           <span>9 ◊</span>
           <span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1 Crore</span>
         </div>
-        <div class="flex justify-between text-white text-lg font-bold" id="25l">
+        <div class="flex justify-between text-white lg:text-lg font-bold" id="25l">
           <span>8 ◊</span>
           <span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 25,00,000</span>
         </div>
-        <div class="flex justify-between text-white text-lg font-bold" id="12l">
+        <div class="flex justify-between text-white lg:text-lg font-bold" id="12l">
           <span>7 ◊</span>
           <span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 12,50,000</span>
         </div>
-        <div class="flex justify-between text-white text-lg font-bold" id="6l">
+        <div class="flex justify-between text-white lg:text-lg font-bold" id="6l">
           <span>6 ◊</span>
           <span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 6,40,000</span>
         </div>
-        <div class="flex justify-between text-white text-lg font-bold" id="3l">
+        <div class="flex justify-between text-white lg:text-lg font-bold" id="3l">
           <span>5 ◊</span>
           <span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3,20,000</span>
         </div>
-        <div class="flex justify-between text-white text-lg font-bold" id="80k">
+        <div class="flex justify-between text-white lg:text-lg font-bold" id="80k">
           <span>4 ◊</span>
           <span> &nbsp; &nbsp; &nbsp; &nbsp; 80,000</span>
         </div>
-        <div class="flex justify-between text-white text-lg font-bold" id="40k">
+        <div class="flex justify-between text-white lg:text-lg font-bold" id="40k">
           <span>3 ◊</span>
           <span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 40,000</span>
         </div>
-        <div class="flex justify-between text-white text-lg font-bold" id="2k">
+        <div class="flex justify-between text-white lg:text-lg font-bold" id="2k">
           <span>2 ◊</span>
           <span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2,000</span>
         </div>
-        <div class="flex justify-between text-white text-lg font-bold bg-yellow-500 rounded-md" id="1k">
+        <div class="flex justify-between text-white lg:text-lg font-bold bg-yellow-500 rounded-md" id="1k">
           <span>1 ◊</span>
           <span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1,000</span>
         </div>
@@ -202,17 +205,17 @@ class="hidden z-20 w-60 lg:w-96 xl:w-96 bg-purple-700 custom-shape shadow-lg rou
       <p id="result"></p>
 
     </div>
-    
-    
-   
+
+
+
     <!-- ----------------show options button------------------ -->
 
     <button id="showOptionsButton"
-      class="absolute left-[30%] md:left-[40vw] lg:left-[79vw] xl:left-[45%] top-[39rem] lg:top-[57rem] xl:top-[93%] bg-green-500 p-3 font-bold rounded-md">Show
+      class="absolute left-[30%] md:left-[40vw] lg:left-[79vw] xl:left-[45%] top-[34rem] lg:top-[57rem] xl:top-[93%] bg-green-500 p-3 font-bold rounded-md">Show
       Options</button>
     <!-- -------------------timer--------------------- -->
     <div id="timer"
-      class="absolute text-yellow-400 font-bold text-4xl top-[18.5rem] lg:top-[31rem] xl:top-[20rem] z-10 w-full flex items-center justify-center ">
+      class="absolute text-yellow-400 font-bold text-4xl top-[17rem] lg:top-[31rem] xl:top-[20rem] z-10 w-full flex items-center justify-center ">
       <h1 class="text-center">30</h1>
     </div>
     <!-- -----------------Timer Ended Boxes -->
@@ -228,74 +231,73 @@ class="hidden z-20 w-60 lg:w-96 xl:w-96 bg-purple-700 custom-shape shadow-lg rou
         </button>
       </div>
     </div>
-    <!-- ---------question container----------------- -->
+    <!-- ---------question & tik-tik-ghadi container----------------- -->
     <div>
       <img src="Tik Tik Ghadi.png" alt=""
-        class="absolute h-14 top-72 sm:top-0 md:top-10 lg:top-[8.5rem] xl:top-80 left-[37%] md:left-[42vw] lg:left-[80vw] xl:left-[46%]">
+        class="absolute h-14 top-64 sm:top-0 md:top-10 lg:top-[8.5rem] xl:top-80 left-[37%] md:left-[42vw] lg:left-[80vw] xl:left-[46%]">
       <div
-        class="questionContainer flex justify-center items-center h-0 absolute top-96 md:top-36 lg:top-60 xl:top-[26rem]">
+        class="questionContainer flex justify-center items-center h-0 absolute top-[22rem] md:top-36 lg:top-60 xl:top-[26rem]">
         <div
-          class="relative w-[23rem] vs:w-[24rem] s:w-[98vw] sm:w-[100vw] md:w-[100vw] lg:w-[170vw] xl:w-[99vw] h-[100px] border-4 border-yellow-500 rounded-full shadow-lg bg-gradient-to-b from-purple-900 to-indigo-700">
+          class="relative w-[23rem] vs:w-[24rem] s:w-[98vw] sm:w-[100vw] md:w-[100vw] lg:w-[170vw] xl:w-[99vw] h-[80px] lg:h-[100px] border-4 border-yellow-500 rounded-full shadow-lg bg-gradient-to-b from-purple-900 to-indigo-700">
           <div
             class="absolute inset-0 flex justify-center items-center rounded-full text-white xl:text-3xl font-semibold font-sans">
           </div>
         </div>
       </div>
     </div>
-    <div id="optionsContainer">
 
-    
-    <!-- ---------option A container-------------------->
-    <div class="optionAContainer option  hidden">
-      <div class="flex justify-center items-center h-0 absolute top-[31rem] lg:top-[45rem] xl:top-[33rem]">
-        <div
-          class="relative w-[95%] s:w-[50vw] md:w-[50vw] lg:w-[85vw] xl:w-[50vw] h-[80px] lg:h-[100px] xl:h-[100px] border-4 border-yellow-500 rounded-full shadow-lg bg-gradient-to-b from-purple-900 to-indigo-700">
+    <div id="optionsContainer">
+      <!-- ---------option A container-------------------->
+      <div class="optionAContainer option  hidden">
+        <div class="flex justify-center items-center h-0 absolute top-[28rem] lg:top-[45rem] xl:top-[33rem]">
           <div
-            class="absolute inset-0 flex justify-center items-center rounded-full text-white xl:text-3xl font-semibold font-sans"
-            id="optionAcontainer">
+            class="relative w-[12rem] s:w-[50vw] md:w-[50vw] lg:w-[85vw] xl:w-[50vw] h-[80px] lg:h-[100px] xl:h-[100px] border-4 border-yellow-500 rounded-full shadow-lg bg-gradient-to-b from-purple-900 to-indigo-700">
+            <div
+              class="absolute inset-0 flex justify-center items-center rounded-full text-white xl:text-3xl font-semibold font-sans"
+              id="optionAcontainer">
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- ---------option B container-------------------->
-    <div class="optionBContainer option  hidden">
-      <div
-        class="flex justify-center items-center h-0 absolute top-[31rem] lg:top-[45rem] xl:top-[33rem] left-[12rem] s:left-[50vw] md:left-[50vw] lg:left-[85%] xl:left-[50%]">
+      <!-- ---------option B container-------------------->
+      <div class="optionBContainer option  hidden">
         <div
-          class="relative w-[12rem] md:w-[50vw] lg:w-[85vw] xl:w-[50vw] h-[80px] lg:h-[100px] xl:h-[100px] border-4 border-yellow-500 rounded-full shadow-lg bg-gradient-to-b from-purple-900 to-indigo-700">
+          class="flex justify-center items-center h-0 absolute top-[28rem] lg:top-[45rem] xl:top-[33rem] left-[12rem] s:left-[50vw] md:left-[50vw] lg:left-[85%] xl:left-[50%]">
           <div
-            class="absolute inset-0 flex justify-center items-center rounded-full text-white xl:text-3xl font-semibold font-roboto"
-            id="optionBcontainer">
+            class="relative w-[12rem] md:w-[50vw] lg:w-[85vw] xl:w-[50vw] h-[80px] lg:h-[100px] xl:h-[100px] border-4 border-yellow-500 rounded-full shadow-lg bg-gradient-to-b from-purple-900 to-indigo-700">
+            <div
+              class="absolute inset-0 flex justify-center items-center rounded-full text-white xl:text-3xl font-semibold font-roboto"
+              id="optionBcontainer">
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- ---------option C container-------------------->
-    <div class="optionCContainer option  hidden">
-      <div class="flex justify-center items-center h-0 absolute top-[36.5rem] lg:top-[53rem] xl:top-[40rem]">
-        <div
-          class="relative w-[12rem] md:w-[50vw] lg:w-[85vw] xl:w-[50vw] h-[80px] lg:h-[100px] xl:h-[100px] border-4 border-yellow-500 rounded-full shadow-lg bg-gradient-to-b from-purple-900 to-indigo-700">
+      <!-- ---------option C container-------------------->
+      <div class="optionCContainer option  hidden">
+        <div class="flex justify-center items-center h-0 absolute top-[33.5rem] lg:top-[53rem] xl:top-[40rem]">
           <div
-            class="absolute inset-0 flex justify-center items-center rounded-full text-white xl:ext-3xl font-semibold"
-            id="optionCcontainer">
+            class="relative w-[12rem] md:w-[50vw] lg:w-[85vw] xl:w-[50vw] h-[80px] lg:h-[100px] xl:h-[100px] border-4 border-yellow-500 rounded-full shadow-lg bg-gradient-to-b from-purple-900 to-indigo-700">
+            <div
+              class="absolute inset-0 flex justify-center items-center rounded-full text-white xl:ext-3xl font-semibold"
+              id="optionCcontainer">
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- ---------option D container-------------------->
-    <div class="optionDContainer option  hidden">
-      <div
-        class="flex justify-center items-center h-0 absolute top-[36.5rem] lg:top-[53rem] xl:top-[40rem] left-[12rem] s:left-[50vw] md:left-[50vw] lg:left-[85%] xl:left-[50%]">
+      <!-- ---------option D container-------------------->
+      <div class="optionDContainer option  hidden">
         <div
-          class="relative w-[12rem] md:w-[50vw] lg:w-[85vw] xl:w-[50vw] h-[80px] lg:h-[100px] xl:h-[100px] border-4 border-yellow-500 rounded-full shadow-lg bg-gradient-to-b from-purple-900 to-indigo-700">
-          <div class="absolute inset-0 flex justify-center items-center rounded-full text-white xl:text-3xl font-bold"
-            id="optionDcontainer">
+          class="flex justify-center items-center h-0 absolute top-[33.5rem] lg:top-[53rem] xl:top-[40rem] left-[12rem] s:left-[50vw] md:left-[50vw] lg:left-[85%] xl:left-[50%]">
+          <div
+            class="relative w-[12rem] md:w-[50vw] lg:w-[85vw] xl:w-[50vw] h-[80px] lg:h-[100px] xl:h-[100px] border-4 border-yellow-500 rounded-full shadow-lg bg-gradient-to-b from-purple-900 to-indigo-700">
+            <div class="absolute inset-0 flex justify-center items-center rounded-full text-white xl:text-3xl font-bold"
+              id="optionDcontainer">
+            </div>
           </div>
         </div>
       </div>
+      <!-- -------------------------------------- -->
     </div>
-    <!-- -------------------------------------- -->
-     </div>
     <!-- <div id="nextQuestionDiv">Correct Answer. Next Question</div> -->
     <div id="nextQuestionDiv"
       class="z-20 w-80 lg:w-96 xl:w-96 bg-purple-700 custom-shape shadow-lg rounded-3xl border-4 border-yellow-500 h-52 lg:h-96 xl:h-96 flex flex-col items-center justify-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 hidden">
@@ -851,7 +853,7 @@ class="hidden z-20 w-60 lg:w-96 xl:w-96 bg-purple-700 custom-shape shadow-lg rou
           correctAnswer: "Antarctic Desert"
         },
         {
-          question: "Set 5 - Who was the captain of the Indian cricket team when they won the ICC Cricket World Cup in 2011?",
+          question: "Set 5 - Who captained India to victory in the 2011 ICC Cricket World Cup?",
           options: ["Virat Kohli", "Sourav Ganguly", "MS Dhoni", "Anil Kumble"],
           correctAnswer: "MS Dhoni"
         },
@@ -918,7 +920,7 @@ class="hidden z-20 w-60 lg:w-96 xl:w-96 bg-purple-700 custom-shape shadow-lg rou
           correctAnswer: "Vikram Sarabhai"
         },
         {
-          question: "Set 6 - Who is credited with the development of the 'Shampoo', derived from the Hindi word 'Champu', meaning to massage?",
+          question: "Set 6 - Who developed the 'Shampoo,' derived from the Hindi word 'Champu' meaning to massage?",
           options: ["Indian barber", "Indian washermen", "Indian ayurvedic practitioners", "Indian spice traders"],
           correctAnswer: "Indian ayurvedic practitioners"
         },
@@ -928,7 +930,7 @@ class="hidden z-20 w-60 lg:w-96 xl:w-96 bg-purple-700 custom-shape shadow-lg rou
           correctAnswer: "Uranium"
         },
         {
-          question: "Set 6 - Which ancient Indian surgeon is known for his work 'Sushruta Samhita' that describes surgical techniques including plastic surgery?",
+          question: "Set 6 - Who authored the 'Sushruta Samhita'?",
           options: ["Sushruta", "Charaka", "Dhanvantari", "Vagbhata"],
           correctAnswer: "Sushruta"
         },
@@ -938,7 +940,7 @@ class="hidden z-20 w-60 lg:w-96 xl:w-96 bg-purple-700 custom-shape shadow-lg rou
           correctAnswer: "Dilip Kumar"
         },
         {
-          question: "Set 6 - Which Bollywood movie was India's official entry to the Oscars for Best Foreign Language Film in 2001 and won an Academy Award for Best Original Score?",
+          question: "Set 6 - Which 2001 Bollywood film won an Oscar for Best Original Score?",
           options: ["Lagaan", "Dil Chahta Hai", "Kabhi Khushi Kabhie Gham", "Gadar: Ek Prem Katha"],
           correctAnswer: "Lagaan"
         }
@@ -1191,64 +1193,64 @@ class="hidden z-20 w-60 lg:w-96 xl:w-96 bg-purple-700 custom-shape shadow-lg rou
       const correctAnswerTrimmed = currentQuestion.correctAnswer.trim();
 
       // Assuming you have the selected option and the correct answer variables defined
-if (selectedOptionTrimmed === correctAnswerTrimmed) {
-    resultElement.textContent = "Correct Answer";
-    nextQuestionDiv.style.display = 'block';
-    
-    // Hide options
-    document.querySelector('.optionAContainer').classList.add('hidden');
-    document.querySelector('.optionBContainer').classList.add('hidden');
-    document.querySelector('.optionCContainer').classList.add('hidden');
-    document.querySelector('.optionDContainer').classList.add('hidden');
-    
-    // Start the respective audio based on the question set
-    switch (currentQuestionSet) {
-        case 1:
+      if (selectedOptionTrimmed === correctAnswerTrimmed) {
+        resultElement.textContent = "Correct Answer";
+        nextQuestionDiv.style.display = 'block';
+
+        // Hide options
+        document.querySelector('.optionAContainer').classList.add('hidden');
+        document.querySelector('.optionBContainer').classList.add('hidden');
+        document.querySelector('.optionCContainer').classList.add('hidden');
+        document.querySelector('.optionDContainer').classList.add('hidden');
+
+        // Start the respective audio based on the question set
+        switch (currentQuestionSet) {
+          case 1:
             startFirstAnswerAudio();
             break;
-        case 2:
+          case 2:
             startSecondAnswerAudio();
             break;
-        case 3:
+          case 3:
             startThirdAnswerAudio();
             break;
-        case 4:
+          case 4:
             startFourthAnswerAudio();
             break;
-        case 5:
+          case 5:
             startFifthAnswerAudio();
             break;
-        case 6:
+          case 6:
             startSixthAnswerAudio();
             break;
-        case 7:
+          case 7:
             startSeventhAnswerAudio();
             break;
-        case 8:
+          case 8:
             startEightAnswerAudio();
             break;
-        case 9:
+          case 9:
             startNinthAnswerAudio();
             break;
-        case 10:
+          case 10:
             startTenthAnswerAudio();
             break;
-        default:
+          default:
             // Handle default case
             break;
-    }
-} else {
-    resultElement.textContent = "Wrong Answer";
-    retryDiv.style.display = 'block';
-    startWrongAnswerAudio();
-
-    // Add red background color to the incorrect option
-    document.querySelector('.optionContainer').forEach(option => {
-        if (option.textContent.trim() === selectedOptionTrimmed) {
-            option.style.backgroundColor = 'red';
         }
-    });
-}
+      } else {
+        resultElement.textContent = "Wrong Answer";
+        retryDiv.style.display = 'block';
+        startWrongAnswerAudio();
+
+        // Add red background color to the incorrect option
+        document.querySelector('.optionContainer').forEach(option => {
+          if (option.textContent.trim() === selectedOptionTrimmed) {
+            option.style.backgroundColor = 'red';
+          }
+        });
+      }
 
 
 
@@ -1276,7 +1278,7 @@ if (selectedOptionTrimmed === correctAnswerTrimmed) {
 
       // Insert option A
       const optionADiv = document.createElement('div');
-      optionADiv.className = "flex justify-center items-center h-0 absolute top-[31rem] lg:top-[45rem] xl:top-[33rem]";
+      optionADiv.className = "flex justify-center items-center h-0 absolute top-[28rem] lg:top-[45rem] xl:top-[33rem]";
       optionADiv.innerHTML = `
       <div class="relative w-[12rem] s:w-[50vw] md:w-[50vw] lg:w-[85vw] xl:w-[50vw] h-[80px] lg:h-[100px] xl:h-[100px] border-4 border-yellow-500 rounded-full shadow-lg bg-gradient-to-b from-purple-900 to-indigo-700">
           <div class="absolute inset-0 flex justify-center items-center rounded-full text-white lg:text-3xl font-bold font-sans" id="optionAcontainer">
@@ -1292,7 +1294,7 @@ if (selectedOptionTrimmed === correctAnswerTrimmed) {
       const optionBDiv = document.createElement('div');
       optionBDiv.className = "optionBContainer";
       optionBDiv.innerHTML = `
-      <div class="flex justify-center items-center h-0 absolute top-[31rem] lg:top-[45rem] xl:top-[33rem] left-[12rem] s:left-[50vw] md:left-[50vw] lg:left-[85%] xl:left-[50%]">
+      <div class="flex justify-center items-center h-0 absolute top-[28rem] lg:top-[45rem] xl:top-[33rem] left-[12rem] s:left-[50vw] md:left-[50vw] lg:left-[85%] xl:left-[50%]">
           <div class="relative w-[12rem] s:w-[50vw] md:w-[50vw] lg:w-[85vw] xl:w-[50vw] h-[80px] lg:h-[100px] xl:h-[100px] border-4 border-yellow-500 rounded-full shadow-lg bg-gradient-to-b from-purple-900 to-indigo-700">
               <div class="absolute inset-0 flex justify-center items-center rounded-full text-white lg:text-3xl font-bold font-roboto" id="optionBcontainer">
                   ${currentQuestion.options[1]} <!-- Option B text -->
@@ -1309,7 +1311,7 @@ if (selectedOptionTrimmed === correctAnswerTrimmed) {
       const optionCDiv = document.createElement('div');
       optionCDiv.className = "optionCContainer";
       optionCDiv.innerHTML = `
-      <div class="flex justify-center items-center h-0 absolute top-[36.5rem] lg:top-[53rem] xl:top-[40rem]">
+      <div class="flex justify-center items-center h-0 absolute top-[33.5rem] lg:top-[53rem] xl:top-[40rem]">
           <div class="relative w-[12rem] s:w-[50vw] md:w-[50vw] lg:w-[85vw] xl:w-[50vw] h-[80px] lg:h-[100px] xl:h-[100px] border-4 border-yellow-500 rounded-full shadow-lg bg-gradient-to-b from-purple-900 to-indigo-700">
               <div class="absolute inset-0 flex justify-center items-center rounded-full text-white lg:text-3xl font-bold" id="optionCcontainer">
                   ${currentQuestion.options[2]} <!-- Option C text -->
@@ -1326,7 +1328,7 @@ if (selectedOptionTrimmed === correctAnswerTrimmed) {
       const optionDDiv = document.createElement('div');
       optionDDiv.className = "optionDContainer";
       optionDDiv.innerHTML = `
-      <div class="flex justify-center items-center h-0 absolute top-[36.5rem] lg:top-[53rem] xl:top-[40rem] left-[12rem] s:left-[50vw] md:left-[50vw] lg:left-[85%] xl:left-[50%]">
+      <div class="flex justify-center items-center h-0 absolute top-[33.5rem] lg:top-[53rem] xl:top-[40rem] left-[12rem] s:left-[50vw] md:left-[50vw] lg:left-[85%] xl:left-[50%]">
           <div class="relative w-[12rem] md:w-[50vw] s:w-[50vw]  lg:w-[85vw] xl:w-[50vw] h-[80px] lg:h-[100px] xl:h-[100px] border-4 border-yellow-500 rounded-full shadow-lg bg-gradient-to-b from-purple-900 to-indigo-700">
               <div class="absolute inset-0 flex justify-center items-center rounded-full text-white lg:text-3xl font-bold" id="optionDcontainer">
                   ${currentQuestion.options[3]} <!-- Option D text -->
@@ -1353,53 +1355,53 @@ if (selectedOptionTrimmed === correctAnswerTrimmed) {
 
     // Attach event listeners
     document.getElementById('showOptionsButton').addEventListener('click', function () {
-  // Determine the time limit based on the current question set
-  let timeLimit;
-  switch (currentQuestionSet) {
-    case 7:
-    case 8:
-    case 9:
-    case 10:
-      timeLimit = 45;
-      break;
-    default:
-      timeLimit = 30;
-      break;
-  }
+      // Determine the time limit based on the current question set
+      let timeLimit;
+      switch (currentQuestionSet) {
+        case 7:
+        case 8:
+        case 9:
+        case 10:
+          timeLimit = 45;
+          break;
+        default:
+          timeLimit = 30;
+          break;
+      }
 
-  startTimer(timeLimit);
-  document.getElementById('lifelinesHide').style.display = 'block';
+      startTimer(timeLimit);
+      document.getElementById('lifelinesHide').style.display = 'block';
 
-  // Stop all audio files for the respective question set
-  switch (currentQuestionSet) {
-    case 3:
-      stopThirdQuestionAudio();
-      break;
-    case 4:
-      stopFourthQuestionAudio();
-      break;
-    case 5:
-      stopFifthQuestionAudio();
-      break;
-    case 6:
-      stopSixthQuestionAudio();
-      break;
-    case 7:
-      stopSeventhQuestionAudio();
-      break;
-    case 8:
-      stopEightQuestionAudio();
-      break;
-    case 9:
-      stopNinthQuestionAudio();
-      break;
-    default:
-      // Handle default case
-      break;
-  }
-  showOptions();
-  this.style.display = 'none';
-});
+      // Stop all audio files for the respective question set
+      switch (currentQuestionSet) {
+        case 3:
+          stopThirdQuestionAudio();
+          break;
+        case 4:
+          stopFourthQuestionAudio();
+          break;
+        case 5:
+          stopFifthQuestionAudio();
+          break;
+        case 6:
+          stopSixthQuestionAudio();
+          break;
+        case 7:
+          stopSeventhQuestionAudio();
+          break;
+        case 8:
+          stopEightQuestionAudio();
+          break;
+        case 9:
+          stopNinthQuestionAudio();
+          break;
+        default:
+          // Handle default case
+          break;
+      }
+      showOptions();
+      this.style.display = 'none';
+    });
 
     document.querySelector('.optionAContainer').addEventListener('click', function () {
       // Stop ticticAudio when the timer stops
@@ -1653,9 +1655,9 @@ if (selectedOptionTrimmed === correctAnswerTrimmed) {
         console.log('flip a question lifeline par click hua hai');
         useFlipQuestion();
       });
-      document.getElementById('flipQuestionButtonKaSpanTag').addEventListener('click', function() {
-      useFlipQuestion();
-    });
+      document.getElementById('flipQuestionButtonKaSpanTag').addEventListener('click', function () {
+        useFlipQuestion();
+      });
     });
     //     // Function to handle clicking on the next question
     function handleNextQuestionClick() {
@@ -1669,50 +1671,50 @@ if (selectedOptionTrimmed === correctAnswerTrimmed) {
     }
     // -----------start timer function------------------
     function startTimer(timeLeft) {
-  const timerDisplay = document.getElementById('timer');
-  const timesup = document.getElementById('timesup');
-  const ticticAudio = document.getElementById('ticticAudio');
+      const timerDisplay = document.getElementById('timer');
+      const timesup = document.getElementById('timesup');
+      const ticticAudio = document.getElementById('ticticAudio');
 
-  // Play ticticAudio when the timer starts
-  ticticAudio.play();
+      // Play ticticAudio when the timer starts
+      ticticAudio.play();
 
-  // IDs of the elements to hide when the timer ends
-  const optionsToHide = ['optionAContainer', 'optionBContainer', 'optionCContainer', 'optionDContainer'];
+      // IDs of the elements to hide when the timer ends
+      const optionsToHide = ['optionAContainer', 'optionBContainer', 'optionCContainer', 'optionDContainer'];
 
-  // Display the initial time
-  timerDisplay.innerHTML = timeLeft;
+      // Display the initial time
+      timerDisplay.innerHTML = timeLeft;
 
-  // Clear any existing interval to avoid multiple intervals running simultaneously
-  if (window.timerInterval) {
-    clearInterval(window.timerInterval);
-  }
+      // Clear any existing interval to avoid multiple intervals running simultaneously
+      if (window.timerInterval) {
+        clearInterval(window.timerInterval);
+      }
 
-  // Update the timer every second
-  window.timerInterval = setInterval(() => {
-    // Reduce timeLeft by 1
-    timeLeft--;
+      // Update the timer every second
+      window.timerInterval = setInterval(() => {
+        // Reduce timeLeft by 1
+        timeLeft--;
 
-    // Display the updated time
-    timerDisplay.innerHTML = timeLeft;
+        // Display the updated time
+        timerDisplay.innerHTML = timeLeft;
 
-    // Check if timeLeft is 0, if so, stop the timer and show 'timesup' element
-    if (timeLeft <= 0) {
-      clearInterval(window.timerInterval);
-      timesup.style.display = 'block';
+        // Check if timeLeft is 0, if so, stop the timer and show 'timesup' element
+        if (timeLeft <= 0) {
+          clearInterval(window.timerInterval);
+          timesup.style.display = 'block';
 
-      // Hide the option elements
-      optionsToHide.forEach(id => {
-        const element = document.getElementById(id);
-        if (element) {
-          element.style.display = 'none';
+          // Hide the option elements
+          optionsToHide.forEach(id => {
+            const element = document.getElementById(id);
+            if (element) {
+              element.style.display = 'none';
+            }
+          });
+          // Stop ticticAudio when the timer stops
+          ticticAudio.pause();
+          ticticAudio.currentTime = 0;
         }
-      });
-      // Stop ticticAudio when the timer stops
-      ticticAudio.pause();
-      ticticAudio.currentTime = 0;
+      }, 1000);
     }
-  }, 1000);
-}
     // ----------------------
     document.getElementById('timesup').addEventListener('click', reloadPage);
     // -------------------------------------
@@ -1844,8 +1846,14 @@ if (selectedOptionTrimmed === correctAnswerTrimmed) {
       skipIntroBtn.click();
     });
 
-    
+
     // -------------------------------------------------------------------------------------------------------------------
+
+
+  </script>
+</body>
+
+</html>
 
     
   </script>
