@@ -69,6 +69,7 @@
 </head>
 
 <body class="bg-cover bg-center h-screen" style="background-image: url(Wallpaper.png);">
+  
   <!-- <div id="optionsContainer">
   <button class="option">Option 1</button>
   <button class="option">Option 2</button>
@@ -117,8 +118,8 @@
     Quit
   </button>
     <!-- --- LIFELINE------- -->
-    <div class=" absolute top-56 lg:top-[30rem] xl:top-72 " id="lifelines">
-      <div class="hidden" id="lifelinesHide">
+    <!-- <div class=" absolute top-56 lg:top-[30rem] xl:top-72 " id="lifelines"> -->
+      <div class="absolute top-56 lg:top-[30rem] xl:top-72 " id="lifelinesHide">
 
         <div class="flex items-center justify-center">
           <!-- -------------flip the question lifeline----------------- -->
@@ -128,16 +129,15 @@
             <div class="inline-block text-white text-3xl font-bold cursor-pointer p-2" id="flipQuestionButtonKaSpanTag">
               Q</div>
           </div>
-          
           <!-- -------------50-50 lifeline----------------- -->
           <div
-            class="flex items-center justify-center size-14 bg-black rounded-full border-4 border-grey-300 cursor-pointer hidden"
+            class="flex items-center justify-center size-14 bg-black rounded-full border-4 border-grey-300 cursor-pointer "
             id="fiftyFiftyButton">
             <span class="text-white text-lg font-semibold cursor-pointer">50:50</span>
           </div>
         </div>
       </div>
-    </div>
+    <!-- </div> -->
 
     <!-- --------------------KBC Logo---------------------- -->
     <div class="flex ml-6 md:ml-[35vw] lg:ml-[70vw] lg:mt-10 xl:mt-0 xl:ml-0 justify-start xl:justify-center">
@@ -1181,7 +1181,7 @@
       const resultElement = document.getElementById('result');
       const nextQuestionDiv = document.getElementById('nextQuestionDiv');
       const retryDiv = document.getElementById('retryDiv');
-      const lifelinesDiv = document.getElementById('lifelines');
+      const lifelinesDiv = document.getElementById('lifelinesHide');
 
       // Hide lifelines
       lifelinesDiv.style.display = 'none';
@@ -1344,7 +1344,7 @@
       optionDDiv.addEventListener('click', handleOptionClick);
 
       // Reset lifeline visibility
-      document.getElementById('lifelines').style.display = 'block';
+      document.getElementById('lifelinesHide').style.display = 'block';
     }
     // -------------------------------------------------------------------------------------------------------
     // Function to show options
