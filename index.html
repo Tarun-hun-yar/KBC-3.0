@@ -95,6 +95,7 @@
     <canvas id="Canvas" class="">
     </canvas>
   </div>
+  
   <!-- -------------------------------------QUIT BOX----------------------------------------- -->
   <div id="quitBox"
     class="hidden z-20 w-60 lg:w-96 xl:w-96 bg-purple-700 custom-shape shadow-lg rounded-3xl border-4 border-yellow-500 absolute h-70 lg:h-96 xl:h-96 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
@@ -110,8 +111,13 @@
   </div>
   <!-- ------------------------------ -->
   <div class="hidden" id="mainDiv">
+    <!-- -----------QUIT BUTTON------------ -->
+    <button id="quitButton"
+    class=" bg-red-500 p-3 text-sm font-bold rounded-md p-0 absolute top-[82vh] lg:top-[30rem] xl:top-72 left-[10rem]">
+    Quit
+  </button>
     <!-- --- LIFELINE------- -->
-    <div class=" absolute top-60 lg:top-[30rem] xl:top-72 " id="lifelines">
+    <div class=" absolute top-64 lg:top-[30rem] xl:top-72 " id="lifelines">
       <div class="hidden" id="lifelinesHide">
 
         <div class="flex items-center justify-center">
@@ -122,11 +128,7 @@
             <div class="inline-block text-white text-3xl font-bold cursor-pointer p-2" id="flipQuestionButtonKaSpanTag">
               Q</div>
           </div>
-          <!-- -----------QUIT BUTTON------------ -->
-          <button id="quitButton"
-            class=" bg-red-500 p-3 font-bold rounded-md p-0">
-            Quit
-          </button>
+          
           <!-- -------------50-50 lifeline----------------- -->
           <div
             class="flex items-center justify-center size-14 bg-black rounded-full border-4 border-grey-300 cursor-pointer hidden"
@@ -1850,12 +1852,6 @@
     // -------------------------------------------------------------------------------------------------------------------
 
 
-  </script>
-</body>
-
-</html>
-
-    
   </script>
 </body>
 
